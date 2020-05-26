@@ -1,0 +1,14 @@
+<a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
+    href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br>
+
+<h1>Review</h1>
+
+<% if flash[:success] %>
+<%= flash[:success] %>
+<% end %><br>
+<br>
+
+<%= @review.rating %> star review of <%= link_to @review.sushi.name, sushi_path(@review.sushi.id), method: :get %> from <%= link_to @review.customer.name, customer_path(@review.customer.id), method: :get %><br>
+<img src=<%= @review.sushi.img_url %> width="300"><br>
+
+<%= button_to "Edit Review", edit_review_path(@review.id), method: :get %>
