@@ -1020,3 +1020,46 @@ Processing by ReviewsController#index as HTML
 Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 1.4ms | Allocations: 21409)
 
 
+Started GET "/oceans" for ::1 at 2020-05-26 16:11:53 -0400
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  Rendered oceans/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 2388)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms | Allocations: 4761)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: 
+    4: <h1>Oceans</h1>
+    5: 
+    6: <% @oceans.each do |ocean| %>
+    7: <%= link_to ocean.name, ocean_path(ocean), method: :get %><br>
+    8: <% end %>
+  
+app/views/oceans/index.html.erb:6
+Started GET "/oceans" for ::1 at 2020-05-26 16:12:53 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (1.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:6
+  Rendered oceans/index.html.erb within layouts/application (Duration: 89.0ms | Allocations: 4048)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 855ms (Views: 774.2ms | ActiveRecord: 3.2ms | Allocations: 39249)
+
+
+Started GET "/oceans/2" for ::1 at 2020-05-26 16:13:00 -0400
+Processing by OceansController#show as HTML
+  Parameters: {"authenticity_token"=>"16esS47lGRN5eYNW5ai7pKNfPjbNmx+wr/411+SaD86VRxMg9BzIGZF00T/iTF1ElJVPiSrwUjEgBXeQ2nOCXw==", "id"=>"2"}
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:23:in `show'
+  Rendering oceans/show.html.erb within layouts/application
+  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 2]]
+  ↳ app/views/oceans/show.html.erb:7
+  Rendered oceans/show.html.erb within layouts/application (Duration: 229.4ms | Allocations: 13908)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 312ms (Views: 279.0ms | ActiveRecord: 2.1ms | Allocations: 19544)
+
+
