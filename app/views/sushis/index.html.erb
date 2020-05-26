@@ -1,0 +1,13 @@
+<a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
+    href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a>
+
+<h1>Sushis</h1>
+
+<% @sushis.each do |sushi| %>
+Presenting the <%= link_to sushi.name, sushi_path(sushi), method: :get %> sushi from the
+<%= link_to sushi.ocean.name, ocean_path(sushi.ocean.id), method: :get %>
+<% if sushi.reviews.count > 0 %>
+, with an average review of <%= sushi.average %> star(s)
+<% end %>:<br>
+<img src=<%= sushi.img_url %> width="300"><br><br>
+<% end %>
