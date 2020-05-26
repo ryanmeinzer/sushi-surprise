@@ -1,0 +1,10 @@
+<a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
+    href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br>
+    
+    <a href="/customers/new">New Customer</a>
+
+<h1>Customers</h1>
+
+<% @customers.each do |customer| %>
+    <%= link_to customer.name, customer_path(customer), method: :get %><br>
+<% end %>
