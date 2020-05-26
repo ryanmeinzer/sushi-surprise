@@ -1,0 +1,30 @@
+<a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
+    href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br>
+
+<h1>New Order</h1>
+
+<h3>Here's your surprise sushi:</h3>
+
+<marquee scrollamount="20" direction="left">
+    <% surprise = Sushi.all.sample %>
+    <%= surprise.name %><br>
+    <img src=<%= surprise.img_url %> width="300">
+</marquee>
+
+<p>Would you like to order this surprise?</p>
+
+<%= button_to "Yes", orders_path(:order => {customer_id: Customer.last.id, sushi_id: surprise.id}), method: :post %><br>
+
+<h3>If not, just place your new order below:</h3><br>
+
+<%= form_for @order do |f| %>
+
+<%= f.label :customer_id, 'Customer' %>
+<%= f.collection_select :customer_id, Customer.all, :id, :name, :selected => Customer.last.id %>
+
+<%= f.label :sushi_id, 'Sushi' %>
+<%= f.collection_select :sushi_id, Sushi.all, :id, :name %>
+
+<%= f.submit %>
+
+<% end %>
