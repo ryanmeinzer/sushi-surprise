@@ -1,0 +1,29 @@
+<a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
+    href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br>
+
+<h1>New Review</h1>
+
+<% if flash[:errors] %>
+<%= flash[:errors] %>
+<% end %><br>
+<br>
+
+<%= form_for @review do |f| %>
+
+    <%= f.label :customer_id, 'Customer' %>
+    <%= f.collection_select :customer_id, Customer.all, :id, :name, :selected => Customer.last.id %>
+
+    <%= f.label :sushi_id, 'Sushi' %>
+    <%= f.collection_select :sushi_id, Sushi.all, :id, :name, :selected => Order.last.sushi.id %>
+
+    <br>
+
+    <%= f.label :rating, 'Review:' %>
+    <%= f.select :rating, ['1', '2', '3', '4', '5'] %> Stars
+
+    <%= f.submit %>
+
+<% end %><br>
+
+<a href="/reviews">See All Reviews</a>
+

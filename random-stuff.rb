@@ -43,6 +43,3 @@ rails g resource Ocean name:string
   resources :oceans, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
 # Views
-
-    <%= f.label :review, 'Review' %>
-    <%= f.number_field :review, ['1', '2', '3', '4', '5'] %>
