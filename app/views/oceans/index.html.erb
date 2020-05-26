@@ -1,0 +1,8 @@
+<a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
+    href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a>
+
+<h1>Oceans</h1>
+
+<% @oceans.each do |ocean| %>
+<%= link_to ocean.name, ocean_path(ocean), method: :get %><br>
+<% end %>
