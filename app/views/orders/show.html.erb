@@ -1,6 +1,8 @@
 <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br>
 
+<a href="/orders/new">New Order</a>
+
 <h1>Orders</h1>
 
 Order #<%= @order.id %> by <%= link_to @order.customer.name, customer_path(@order.customer.id), method: :get %> of
