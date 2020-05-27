@@ -20,3 +20,10 @@ Order #<%= link_to order.id, order_path(order), method: :get %><br>
 <% @customer.reviews.each do |review| %>
     <%= link_to review.sushi.name, sushi_path(review.sushi.id), method: :get %> | <%= review.rating %> stars<br>
 <% end %>
+
+<% if @customer.favorites.count > 0 %>
+    <h3>Here are <%= @customer.name %>'s favorite sushi(s):</h3>
+    <% @customer.favorites.each do |favorite| %>
+        <%= favorite %><br>
+    <% end %>
+<% end %>
