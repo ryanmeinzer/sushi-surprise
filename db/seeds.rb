@@ -30,6 +30,13 @@ Sushi.create(name: "Una Tuna", img_url: "https://media-cdn.tripadvisor.com/media
 Sushi.create(name: "Eel Meal", img_url: "https://media.gettyimages.com/photos/two-pieces-of-eel-nigiri-sushi-picture-id149058086?s=2048x2048", ocean_id: Ocean.all.sample.id)
 Sushi.create(name: "Simply Shrimpy", img_url: "https://wfg22p.s3.amazonaws.com/media/dishes/ebi_nigiri_sushi_576-reg.jpg", ocean_id: Ocean.all.sample.id)
 Sushi.create(name: "Crab Nab", img_url: "https://sushimi.co.za/wp-content/uploads/2017/09/Nigiri-crab.jpg", ocean_id: Ocean.all.sample.id)
+Sushi.create(name: "Salmon Roe", img_url: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Salmon_roe_gunkanmaki_of_Moriya_Sakanaya_Uohei.jpg", ocean_id: Ocean.all.sample.id)
+Sushi.create(name: "gonad of sea urchin", img_url: "https://planomagazine.com/wp-content/uploads/2017/09/Uni-Sushi-Plano-Magazine-5.jpg", ocean_id: Ocean.all.sample.id)
+Sushi.create(name: "Young Yellowtail", img_url: "https://previews.123rf.com/images/andreyst/andreyst1204/andreyst120402361/13126260-closeup-of-a-young-yellow-tail-sushi.jpg", ocean_id: Ocean.all.sample.id)
+Sushi.create(name: "Amaebi", img_url: "https://i0.wp.com/www.sushifaq.com/wp-content/uploads/2013/07/amaebi.jpg", ocean_id: Ocean.all.sample.id)
+Sushi.create(name: "Squid", img_url: "https://thumbs.dreamstime.com/z/ika-sushi-17455010.jpg", ocean_id: Ocean.all.sample.id)
+
+
 
 10.times do 
     Order.create(customer_id: Customer.all.sample.id, sushi_id: Sushi.all.sample.id)
