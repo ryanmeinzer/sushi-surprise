@@ -7,4 +7,5 @@ class Sushi < ApplicationRecord
     def average
         self.reviews.map { |review| review.rating }.sum / self.reviews.count
     end
+
 end
