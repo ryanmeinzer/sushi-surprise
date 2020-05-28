@@ -3,6 +3,8 @@
 
 <h1>Oceans</h1>
 
+
 <% @oceans.each do |ocean| %>
 <%= link_to ocean.name, ocean_path(ocean), method: :get %><br>
+<img src=<%= ocean.img_url %> width="300"><br><br>
 <% end %>

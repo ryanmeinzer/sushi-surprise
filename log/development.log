@@ -1635,228 +1635,13 @@ Processing by OceansController#index as HTML
 Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5003)
 
 
-<<<<<<< HEAD
-Started GET "/" for ::1 at 2020-05-27 16:56:31 -0400
-  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/maharajsyed/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/maharajsyed/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.6ms | Allocations: 480)
-Completed 200 OK in 42ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 2999)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 16:56:39 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 4012)
-[Webpacker] Compiling...
-[Webpacker] Compiled all packs in /Users/maharajsyed/Development/code/sushi-surprise/public/packs
-[Webpacker] Hash: 9d70d76b7c2618ff193b
-Version: webpack 4.43.0
-Time: 5446ms
-Built at: 05/27/2020 4:56:48 PM
-                                     Asset       Size       Chunks                         Chunk Names
-    js/application-f2c028c1cf9b63bf3c20.js    655 KiB  application  [emitted] [immutable]  application
-js/application-f2c028c1cf9b63bf3c20.js.map    768 KiB  application  [emitted] [dev]        application
-                             manifest.json  364 bytes               [emitted]              
-Entrypoint application = js/application-f2c028c1cf9b63bf3c20.js js/application-f2c028c1cf9b63bf3c20.js.map
-[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
-[./app/javascript/channels/index.js] 211 bytes {application} [built]
-[./app/javascript/packs/application.js] 772 bytes {application} [built]
-[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
-[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
-    + 6 hidden modules
-
-  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 107)
-Completed 200 OK in 9267ms (Views: 9236.5ms | ActiveRecord: 2.8ms | Allocations: 114545)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 16:57:04 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 848)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.2ms | Allocations: 8903)
-
-
-Started GET "/sushis" for ::1 at 2020-05-27 16:57:15 -0400
-Processing by SushisController#index as HTML
-  Rendering sushis/index.html.erb within layouts/application
-  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/sushis/index.html.erb:6
-  [1m[36mOcean Load (0.9ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-  ↳ app/models/sushi.rb:8:in `average'
-  Rendered sushis/index.html.erb within layouts/application (Duration: 89.3ms | Allocations: 35112)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 118ms (Views: 95.6ms | ActiveRecord: 6.1ms | Allocations: 46330)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 16:57:18 -0400
-Processing by OceansController#index as HTML
-  Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.6ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
-  ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1090)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.6ms | Allocations: 9711)
-
-
-Started GET "/home" for ::1 at 2020-05-27 16:57:21 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/home"):
-  
-actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
-railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.2.2) lib/rack/method_override.rb:24:in `call'
-rack (2.2.2) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
-webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
-puma (4.3.5) lib/puma/configuration.rb:228:in `call'
-puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
-puma (4.3.5) lib/puma/server.rb:472:in `process_client'
-puma (4.3.5) lib/puma/server.rb:328:in `block in run'
-puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/oceans" for ::1 at 2020-05-27 16:57:23 -0400
-Processing by OceansController#index as HTML
-  Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
-  ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 939)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.3ms | Allocations: 9016)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 16:59:01 -0400
-Processing by OceansController#index as HTML
-  Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
-  ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1063)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 100)
-Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.2ms | Allocations: 10293)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 16:59:17 -0400
-=======
 Started GET "/oceans" for ::1 at 2020-05-26 17:16:38 -0400
   [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
->>>>>>> master
 Processing by OceansController#index as HTML
   Rendering oceans/index.html.erb within layouts/application
   [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
   ↳ app/views/oceans/index.html.erb:6
-<<<<<<< HEAD
-  Rendered oceans/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1063)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 100)
-Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 10285)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 16:59:20 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 981)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.2ms | Allocations: 9588)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 16:59:24 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 833)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.4ms | Allocations: 8865)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 16:59:41 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 833)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.5ms | Allocations: 8864)
-
-
-Started GET "/orders" for ::1 at 2020-05-27 16:59:44 -0400
-Processing by OrdersController#index as HTML
-  Rendering orders/index.html.erb within layouts/application
-  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
-=======
   Rendered oceans/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4252)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 47ms (Views: 33.5ms | ActiveRecord: 1.0ms | Allocations: 15949)
@@ -1876,7 +1661,6 @@ Started GET "/orders" for ::1 at 2020-05-26 17:16:41 -0400
 Processing by OrdersController#index as HTML
   Rendering orders/index.html.erb within layouts/application
   [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
->>>>>>> master
   ↳ app/views/orders/index.html.erb:8
   [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
@@ -1890,15 +1674,6 @@ Processing by OrdersController#index as HTML
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
-<<<<<<< HEAD
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-=======
   [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
@@ -1906,7 +1681,6 @@ Processing by OrdersController#index as HTML
   [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/orders/index.html.erb:11
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
@@ -1924,24 +1698,6 @@ Processing by OrdersController#index as HTML
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
-<<<<<<< HEAD
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  Rendered orders/index.html.erb within layouts/application (Duration: 56.7ms | Allocations: 20635)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 83ms (Views: 73.5ms | ActiveRecord: 3.4ms | Allocations: 29895)
-
-
-Started GET "/reviews" for ::1 at 2020-05-27 16:59:48 -0400
-Processing by ReviewsController#index as HTML
-  Rendering reviews/index.html.erb within layouts/application
-  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
-  ↳ app/views/reviews/index.html.erb:7
-  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-=======
   [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
@@ -1957,25 +1713,16 @@ Processing by ReviewsController#index as HTML
   [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
   ↳ app/views/reviews/index.html.erb:7
   [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
-<<<<<<< HEAD
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-=======
   [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
@@ -1983,11 +1730,7 @@ Processing by ReviewsController#index as HTML
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
-<<<<<<< HEAD
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-=======
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
@@ -2013,35 +1756,6 @@ Processing by ReviewsController#index as HTML
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
-<<<<<<< HEAD
-  Rendered reviews/index.html.erb within layouts/application (Duration: 89.8ms | Allocations: 18438)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 107ms (Views: 101.7ms | ActiveRecord: 2.2ms | Allocations: 26951)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 16:59:57 -0400
-Processing by OceansController#index as HTML
-  Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
-  ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 928)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.3ms | Allocations: 8966)
-
-
-Started GET "/sushis" for ::1 at 2020-05-27 16:59:59 -0400
-Processing by SushisController#index as HTML
-  Rendering sushis/index.html.erb within layouts/application
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/sushis/index.html.erb:6
-  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-=======
   Rendered reviews/index.html.erb within layouts/application (Duration: 39.9ms | Allocations: 22861)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 52ms (Views: 45.3ms | ActiveRecord: 3.1ms | Allocations: 28177)
@@ -2057,7 +1771,6 @@ Processing by SushisController#index as HTML
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
   ↳ app/views/sushis/index.html.erb:9
   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
->>>>>>> master
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
   ↳ app/models/sushi.rb:8:in `average'
@@ -2065,19 +1778,11 @@ Processing by SushisController#index as HTML
   ↳ app/views/sushis/index.html.erb:8
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
   ↳ app/views/sushis/index.html.erb:9
-<<<<<<< HEAD
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-=======
   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
   ↳ app/models/sushi.rb:8:in `average'
   [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/sushis/index.html.erb:8
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
   ↳ app/views/sushis/index.html.erb:9
@@ -2087,15 +1792,9 @@ Processing by SushisController#index as HTML
   ↳ app/models/sushi.rb:8:in `average'
   [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
   ↳ app/views/sushis/index.html.erb:8
-<<<<<<< HEAD
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-=======
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
   ↳ app/views/sushis/index.html.erb:9
   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
->>>>>>> master
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
   ↳ app/models/sushi.rb:8:in `average'
@@ -2107,50 +1806,6 @@ Processing by SushisController#index as HTML
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
   ↳ app/models/sushi.rb:8:in `average'
-<<<<<<< HEAD
-  Rendered sushis/index.html.erb within layouts/application (Duration: 45.0ms | Allocations: 15453)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 3.0ms | Allocations: 24058)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 17:05:40 -0400
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 855)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 6)
-Completed 200 OK in 62ms (Views: 54.9ms | ActiveRecord: 1.8ms | Allocations: 8894)
-
-
-Started GET "/orders" for ::1 at 2020-05-27 17:05:45 -0400
-Processing by OrdersController#index as HTML
-  Rendering orders/index.html.erb within layouts/application
-  [1m[36mOrder Load (2.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
-  ↳ app/views/orders/index.html.erb:8
-  [1m[36mSushi Load (1.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (1.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-=======
   Rendered sushis/index.html.erb within layouts/application (Duration: 35.2ms | Allocations: 17584)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 2.9ms | Allocations: 22138)
@@ -2254,17 +1909,12 @@ Processing by OrdersController#index as HTML
   [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/orders/index.html.erb:11
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
-<<<<<<< HEAD
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-=======
   [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
@@ -2272,46 +1922,14 @@ Processing by OrdersController#index as HTML
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
-<<<<<<< HEAD
-  [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-=======
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/orders/index.html.erb:11
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
-<<<<<<< HEAD
-  Rendered orders/index.html.erb within layouts/application (Duration: 82.8ms | Allocations: 15796)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 102ms (Views: 92.0ms | ActiveRecord: 6.1ms | Allocations: 23833)
-
-
-Started GET "/reviews" for ::1 at 2020-05-27 17:05:48 -0400
-Processing by ReviewsController#index as HTML
-  Rendering reviews/index.html.erb within layouts/application
-  [1m[36mReview Load (3.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
-  ↳ app/views/reviews/index.html.erb:7
-  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-=======
   Rendered orders/index.html.erb within layouts/application (Duration: 34.6ms | Allocations: 15751)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 2.1ms | Allocations: 19830)
@@ -2335,29 +1953,11 @@ Processing by ReviewsController#index as HTML
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
-<<<<<<< HEAD
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-=======
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
@@ -2373,52 +1973,17 @@ Processing by ReviewsController#index as HTML
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
-<<<<<<< HEAD
-  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-=======
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   ↳ app/views/reviews/index.html.erb:8
-<<<<<<< HEAD
-  Rendered reviews/index.html.erb within layouts/application (Duration: 125.0ms | Allocations: 17349)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 150ms (Views: 140.1ms | ActiveRecord: 8.0ms | Allocations: 25390)
-
-
-Started GET "/sushis" for ::1 at 2020-05-27 17:05:52 -0400
-Processing by SushisController#index as HTML
-  Rendering sushis/index.html.erb within layouts/application
-  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/sushis/index.html.erb:6
-  [1m[36mOcean Load (0.8ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mOcean Load (0.6ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-=======
   Rendered reviews/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 17324)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 2.0ms | Allocations: 21404)
@@ -2446,27 +2011,11 @@ Processing by SushisController#index as HTML
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
   ↳ app/models/sushi.rb:8:in `average'
   [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/sushis/index.html.erb:8
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
   ↳ app/views/sushis/index.html.erb:9
   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
   ↳ app/models/sushi.rb:8:in `map'
-<<<<<<< HEAD
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mCACHE Ocean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mCACHE Ocean Load (0.8ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-=======
   [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
   ↳ app/models/sushi.rb:8:in `average'
   [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
@@ -2480,55 +2029,11 @@ Processing by SushisController#index as HTML
   [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
   ↳ app/views/sushis/index.html.erb:8
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
->>>>>>> master
   ↳ app/views/sushis/index.html.erb:9
   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
   ↳ app/models/sushi.rb:8:in `average'
-<<<<<<< HEAD
-  Rendered sushis/index.html.erb within layouts/application (Duration: 86.8ms | Allocations: 15276)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 165ms (Views: 156.3ms | ActiveRecord: 6.3ms | Allocations: 23313)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 17:05:55 -0400
-Processing by OceansController#index as HTML
-  Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.5ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
-  ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 941)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 47ms (Views: 41.7ms | ActiveRecord: 0.5ms | Allocations: 8988)
-
-
-Started GET "/orders" for ::1 at 2020-05-27 17:06:05 -0400
-Processing by OrdersController#index as HTML
-  Rendering orders/index.html.erb within layouts/application
-  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
-  ↳ app/views/orders/index.html.erb:8
-  [1m[36mSushi Load (0.7ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-=======
   Rendered sushis/index.html.erb within layouts/application (Duration: 41.7ms | Allocations: 15233)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 2.4ms | Allocations: 19317)
@@ -2672,7 +2177,6 @@ Processing by OrdersController#index as HTML
   [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
->>>>>>> master
   ↳ app/views/orders/index.html.erb:11
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
@@ -2692,70 +2196,6 @@ Processing by OrdersController#index as HTML
   ↳ app/views/orders/index.html.erb:11
   [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
-<<<<<<< HEAD
-  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  Rendered orders/index.html.erb within layouts/application (Duration: 96.7ms | Allocations: 15744)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 129ms (Views: 124.2ms | ActiveRecord: 3.9ms | Allocations: 23781)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 17:06:25 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:16
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:23
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:23
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:26
-  Rendered orders/new.html.erb within layouts/application (Duration: 82.6ms | Allocations: 12542)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 128ms (Views: 119.9ms | ActiveRecord: 1.9ms | Allocations: 20630)
-
-
-Started GET "/home" for ::1 at 2020-05-27 17:08:36 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/home"):
-  
-actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
-railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.2.2) lib/rack/method_override.rb:24:in `call'
-rack (2.2.2) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
-actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
-webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
-puma (4.3.5) lib/puma/configuration.rb:228:in `call'
-puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
-puma (4.3.5) lib/puma/server.rb:472:in `process_client'
-puma (4.3.5) lib/puma/server.rb:328:in `block in run'
-puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/customers" for ::1 at 2020-05-27 17:10:18 -0400
-=======
   [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:11
   Rendered orders/index.html.erb within layouts/application (Duration: 32.2ms | Allocations: 15744)
@@ -2814,83 +2254,10 @@ Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 1.4ms | Allocations: 198
 
 
 Started GET "/customers" for ::1 at 2020-05-26 17:21:14 -0400
->>>>>>> master
 Processing by CustomersController#index as HTML
   Rendering customers/index.html.erb within layouts/application
   [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
   ↳ app/views/customers/index.html.erb:8
-<<<<<<< HEAD
-  Rendered customers/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 980)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 100)
-Completed 200 OK in 69ms (Views: 63.8ms | ActiveRecord: 0.2ms | Allocations: 10201)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 17:22:53 -0400
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 997)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 105)
-Completed 200 OK in 204ms (Views: 187.4ms | ActiveRecord: 0.6ms | Allocations: 10222)
-
-
-Started GET "/" for ::1 at 2020-05-27 17:23:30 -0400
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/maharajsyed/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/maharajsyed/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.6ms | Allocations: 190)
-Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 1113)
-
-
-Started GET "/sushi" for ::1 at 2020-05-27 17:23:35 -0400
-  
-ActionController::RoutingError (No route matches [GET] "/sushi"):
-  
-actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
-web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
-=======
-  Rendered customers/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 833)
-[Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 4905)
-
-
-Started GET "/customers" for ::1 at 2020-05-26 17:21:15 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:8
-  Rendered customers/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 833)
-[Webpacker] Everything's up-to-date. Nothing to do
-Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4911)
-
-
-Started GET "/orders" for ::1 at 2020-05-26 17:21:16 -0400
-Processing by OrdersController#index as HTML
-  Rendering orders/index.html.erb within layouts/application
-  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
-  ↳ app/views/orders/index.html.erb:8
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
   [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/views/orders/index.html.erb:10
   [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
@@ -14050,7 +13417,6 @@ web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
 web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
->>>>>>> master
 actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
 railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -14076,26 +13442,6 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-<<<<<<< HEAD
-Started GET "/sushis" for ::1 at 2020-05-27 17:23:39 -0400
-Processing by SushisController#index as HTML
-  Rendering sushis/index.html.erb within layouts/application
-  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/sushis/index.html.erb:6
-  [1m[36mOcean Load (2.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 1]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
-=======
 Started GET "/sushis" for ::1 at 2020-05-27 13:34:29 -0400
 Processing by SushisController#index as HTML
   Rendering sushis/index.html.erb within layouts/application
@@ -14707,25 +14053,10 @@ Processing by SushisController#index as HTML
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
   ↳ app/views/sushis/index.html.erb:8
   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
->>>>>>> master
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 2]]
   ↳ app/models/sushi.rb:8:in `average'
   [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-<<<<<<< HEAD
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
-=======
   ↳ app/views/sushis/index.html.erb:7
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
   ↳ app/views/sushis/index.html.erb:8
@@ -14738,24 +14069,10 @@ Processing by SushisController#index as HTML
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
   ↳ app/views/sushis/index.html.erb:8
   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
->>>>>>> master
   ↳ app/models/sushi.rb:8:in `map'
   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 4]]
   ↳ app/models/sushi.rb:8:in `average'
   [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-<<<<<<< HEAD
-  ↳ app/views/sushis/index.html.erb:8
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-  ↳ app/views/sushis/index.html.erb:9
-  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
-  ↳ app/models/sushi.rb:8:in `average'
-  Rendered sushis/index.html.erb within layouts/application (Duration: 109.8ms | Allocations: 15493)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 147ms (Views: 135.6ms | ActiveRecord: 9.3ms | Allocations: 24105)
-=======
   ↳ app/views/sushis/index.html.erb:7
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 5]]
   ↳ app/views/sushis/index.html.erb:8
@@ -14894,7 +14211,6 @@ Processing by HomesController#index as HTML
   Rendered homes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 282)
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 33ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 10756)
->>>>>>> master
 
 
 Started GET "/" for ::1 at 2020-05-27 18:02:18 -0400
@@ -15892,527 +15208,662 @@ Processing by CustomersController#index as HTML
 Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.1ms | Allocations: 9727)
 
 
-Started GET "/" for ::1 at 2020-05-27 19:03:34 -0400
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-05-27 18:32:46 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by HomesController#index as HTML
   Rendering homes/index.html.erb within layouts/application
-  Rendered homes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 236)
+  Rendered homes/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 210)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 106)
-Completed 200 OK in 76ms (Views: 71.0ms | ActiveRecord: 0.0ms | Allocations: 22204)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 107)
+Completed 200 OK in 318ms (Views: 287.9ms | ActiveRecord: 0.0ms | Allocations: 20646)
 
 
-Started GET "/orders" for ::1 at 2020-05-27 19:03:39 -0400
-Processing by OrdersController#index as HTML
-  Rendering orders/index.html.erb within layouts/application
-  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
-  ↳ app/views/orders/index.html.erb:8
-  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  Rendered orders/index.html.erb within layouts/application (Duration: 107.9ms | Allocations: 37493)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 126ms (Views: 113.8ms | ActiveRecord: 5.3ms | Allocations: 47210)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 19:03:41 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageUrlToOceans (20200528011111)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "oceans" ADD "img_url" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200528011111"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Destroy (3.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Destroy (0.5ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Destroy (0.8ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.5ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (7.9ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (0.4ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (0.5ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 3]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (33.6ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (0.4ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (0.3ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Destroy (1.2ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSushi Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sushis" WHERE "sushis"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSushi Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sushis" WHERE "sushis"."id" = ?[0m  [["id", 2]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSushi Destroy (0.6ms)[0m  [1m[31mDELETE FROM "sushis" WHERE "sushis"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSushi Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sushis" WHERE "sushis"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSushi Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sushis" WHERE "sushis"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (14.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (1.9ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 4]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.7ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 10]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.6ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 12]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (1.0ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.5ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 4]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.5ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.6ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 10]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.5ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.6ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 12]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Create (1.8ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Johnny"], ["created_at", "2020-05-28 14:10:44.289499"], ["updated_at", "2020-05-28 14:10:44.289499"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Create (1.2ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Suzy"], ["created_at", "2020-05-28 14:10:44.298795"], ["updated_at", "2020-05-28 14:10:44.298795"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mary"], ["created_at", "2020-05-28 14:10:44.307034"], ["updated_at", "2020-05-28 14:10:44.307034"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Create (0.9ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Billy"], ["created_at", "2020-05-28 14:10:44.312511"], ["updated_at", "2020-05-28 14:10:44.312511"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Milly"], ["created_at", "2020-05-28 14:10:44.323245"], ["updated_at", "2020-05-28 14:10:44.323245"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (1.6ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "North Atlantic Ocean"], ["created_at", "2020-05-28 14:10:44.330464"], ["updated_at", "2020-05-28 14:10:44.330464"], ["img_url", "https://www.carbonbrief.org/wp-content/uploads/2018/04/north-atlantic-ocean-1.jpg"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (0.6ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "South Atlantic Ocean"], ["created_at", "2020-05-28 14:10:44.338849"], ["updated_at", "2020-05-28 14:10:44.338849"], ["img_url", "https://30a.com/wp-content/uploads/2018/05/untitled-design-425.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (0.4ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "North Pacific Ocean"], ["created_at", "2020-05-28 14:10:44.344365"], ["updated_at", "2020-05-28 14:10:44.344365"], ["img_url", "https://images.glaciermedia.ca/polopoly_fs/1.22782394.1505678749!/fileImage/httpImage/image.jpg_gen/derivatives/landscape_804/2017091718-jpg.jpg"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (0.4ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "South Pacific Ocean"], ["created_at", "2020-05-28 14:10:44.357534"], ["updated_at", "2020-05-28 14:10:44.357534"], ["img_url", "https://c.stocksy.com/a/Z27900/z9/2172019.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (0.6ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "Artic Ocean"], ["created_at", "2020-05-28 14:10:44.363269"], ["updated_at", "2020-05-28 14:10:44.363269"], ["img_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Arctic_ice.jpg/1200px-Arctic_ice.jpg"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (0.7ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "Indian Ocean"], ["created_at", "2020-05-28 14:10:44.369458"], ["updated_at", "2020-05-28 14:10:44.369458"], ["img_url", "https://upload.wikimedia.org/wikipedia/commons/1/13/2016_Margaret_River_Australia_-_indian_ocean.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Create (1.4ms)[0m  [1m[32mINSERT INTO "oceans" ("name", "created_at", "updated_at", "img_url") VALUES (?, ?, ?, ?)[0m  [["name", "Antarctic Ocean"], ["created_at", "2020-05-28 14:10:44.376898"], ["updated_at", "2020-05-28 14:10:44.376898"], ["img_url", "https://d1hbkx7j13ujdz.cloudfront.net/wp-content/uploads/2018/08/Lets-Explore-the-Antarctic-Ocean-1024x683.jpg"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.8ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Create (13.2ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Yummy Salmon Tummy"], ["img_url", "https://i.redd.it/12cdw2wb55p01.jpg"], ["ocean_id", 10], ["created_at", "2020-05-28 14:10:44.409654"], ["updated_at", "2020-05-28 14:10:44.409654"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Una Tuna"], ["img_url", "https://media-cdn.tripadvisor.com/media/photo-s/06/7e/7b/f0/tuna-nigiri.jpg"], ["ocean_id", 10], ["created_at", "2020-05-28 14:10:44.431765"], ["updated_at", "2020-05-28 14:10:44.431765"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.6ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eel Meal"], ["img_url", "https://media.gettyimages.com/photos/two-pieces-of-eel-nigiri-sushi-picture-id149058086?s=2048x2048"], ["ocean_id", 12], ["created_at", "2020-05-28 14:10:44.463296"], ["updated_at", "2020-05-28 14:10:44.463296"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Simply Shrimpy"], ["img_url", "https://wfg22p.s3.amazonaws.com/media/dishes/ebi_nigiri_sushi_576-reg.jpg"], ["ocean_id", 14], ["created_at", "2020-05-28 14:10:44.471095"], ["updated_at", "2020-05-28 14:10:44.471095"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mSushi Create (2.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Crab Nab"], ["img_url", "https://sushimi.co.za/wp-content/uploads/2017/09/Nigiri-crab.jpg"], ["ocean_id", 14], ["created_at", "2020-05-28 14:10:44.481769"], ["updated_at", "2020-05-28 14:10:44.481769"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Salmon Roe"], ["img_url", "https://upload.wikimedia.org/wikipedia/commons/8/8f/Salmon_roe_gunkanmaki_of_Moriya_Sakanaya_Uohei.jpg"], ["ocean_id", 8], ["created_at", "2020-05-28 14:10:44.497320"], ["updated_at", "2020-05-28 14:10:44.497320"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sea Urchin"], ["img_url", "https://planomagazine.com/wp-content/uploads/2017/09/Uni-Sushi-Plano-Magazine-5.jpg"], ["ocean_id", 12], ["created_at", "2020-05-28 14:10:44.506104"], ["updated_at", "2020-05-28 14:10:44.506104"]]
+  [1m[35m (18.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Young Yellowtail"], ["img_url", "https://previews.123rf.com/images/andreyst/andreyst1204/andreyst120402361/13126260-closeup-of-a-young-yellow-tail-sushi.jpg"], ["ocean_id", 8], ["created_at", "2020-05-28 14:10:44.545042"], ["updated_at", "2020-05-28 14:10:44.545042"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.7ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amaebi"], ["img_url", "https://i0.wp.com/www.sushifaq.com/wp-content/uploads/2013/07/amaebi.jpg"], ["ocean_id", 8], ["created_at", "2020-05-28 14:10:44.559432"], ["updated_at", "2020-05-28 14:10:44.559432"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Create (1.9ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Squid"], ["img_url", "https://thumbs.dreamstime.com/z/ika-sushi-17455010.jpg"], ["ocean_id", 10], ["created_at", "2020-05-28 14:10:44.568567"], ["updated_at", "2020-05-28 14:10:44.568567"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Anago"], ["img_url", "https://media-cdn.tripadvisor.com/media/photo-s/06/ba/c6/f8/itacho-sushi.jpg"], ["ocean_id", 14], ["created_at", "2020-05-28 14:10:44.579826"], ["updated_at", "2020-05-28 14:10:44.579826"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.5ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Tai"], ["img_url", "https://c8.alamy.com/comp/M0DK8H/tai-nigiri-sushi-M0DK8H.jpg"], ["ocean_id", 13], ["created_at", "2020-05-28 14:10:44.598643"], ["updated_at", "2020-05-28 14:10:44.598643"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scallop"], ["img_url", "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hotate_gai.jpg"], ["ocean_id", 12], ["created_at", "2020-05-28 14:10:44.607803"], ["updated_at", "2020-05-28 14:10:44.607803"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Aji"], ["img_url", "https://ajisushiissaquah.com/wp-content/uploads/2015/05/aji-sushi-seattle-3.jpg"], ["ocean_id", 9], ["created_at", "2020-05-28 14:10:44.618847"], ["updated_at", "2020-05-28 14:10:44.618847"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Octopus"], ["img_url", "https://previews.123rf.com/images/ostancoff/ostancoff1504/ostancoff150400050/38176372-octopus-sushi-nigiri-isolated-on-white-background.jpg"], ["ocean_id", 13], ["created_at", "2020-05-28 14:10:44.627684"], ["updated_at", "2020-05-28 14:10:44.627684"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mackrel"], ["img_url", "https://d1rxvdm0rjmjgy.cloudfront.net/srv/images/saba-sushi-main-1600x900.jpg"], ["ocean_id", 12], ["created_at", "2020-05-28 14:10:44.636716"], ["updated_at", "2020-05-28 14:10:44.636716"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sweetfish"], ["img_url", "https://live.staticflickr.com/5270/5896850991_daa98cc50e_b.jpg"], ["ocean_id", 11], ["created_at", "2020-05-28 14:10:44.645811"], ["updated_at", "2020-05-28 14:10:44.645811"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sanma"], ["img_url", "https://upload.wikimedia.org/wikipedia/commons/4/4a/Toro_sanma_aburi-yaki_zushi_1_by_hirotomo.jpg"], ["ocean_id", 8], ["created_at", "2020-05-28 14:10:44.676493"], ["updated_at", "2020-05-28 14:10:44.676493"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.3ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mantis Shrimp"], ["img_url", "https://i.pinimg.com/originals/ed/cd/5f/edcd5fd0500d8708d95ce6240c7827d4.jpg"], ["ocean_id", 8], ["created_at", "2020-05-28 14:10:44.687703"], ["updated_at", "2020-05-28 14:10:44.687703"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Create (0.4ms)[0m  [1m[32mINSERT INTO "sushis" ("name", "img_url", "ocean_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Temaki"], ["img_url", "https://images.wisegeek.com/temaki-sushi.jpg"], ["ocean_id", 9], ["created_at", "2020-05-28 14:10:44.695665"], ["updated_at", "2020-05-28 14:10:44.695665"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 7], ["sushi_id", 12], ["created_at", "2020-05-28 14:10:44.710405"], ["updated_at", "2020-05-28 14:10:44.710405"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 10], ["sushi_id", 9], ["created_at", "2020-05-28 14:10:44.727593"], ["updated_at", "2020-05-28 14:10:44.727593"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 10], ["sushi_id", 14], ["created_at", "2020-05-28 14:10:44.747266"], ["updated_at", "2020-05-28 14:10:44.747266"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
   [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 6262)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 10], ["sushi_id", 13], ["created_at", "2020-05-28 14:10:44.761034"], ["updated_at", "2020-05-28 14:10:44.761034"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.5ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 7], ["sushi_id", 15], ["created_at", "2020-05-28 14:10:44.776379"], ["updated_at", "2020-05-28 14:10:44.776379"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.3ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 10], ["sushi_id", 14], ["created_at", "2020-05-28 14:10:44.791380"], ["updated_at", "2020-05-28 14:10:44.791380"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 9], ["sushi_id", 24], ["created_at", "2020-05-28 14:10:44.806156"], ["updated_at", "2020-05-28 14:10:44.806156"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 7], ["sushi_id", 13], ["created_at", "2020-05-28 14:10:44.823152"], ["updated_at", "2020-05-28 14:10:44.823152"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.7ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 8], ["sushi_id", 11], ["created_at", "2020-05-28 14:10:44.836141"], ["updated_at", "2020-05-28 14:10:44.836141"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "sushi_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["customer_id", 8], ["sushi_id", 20], ["created_at", "2020-05-28 14:10:44.867177"], ["updated_at", "2020-05-28 14:10:44.867177"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mReview Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 9], ["customer_id", 11], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 11], ["sushi_id", 9], ["rating", 3], ["created_at", "2020-05-28 14:10:44.886604"], ["updated_at", "2020-05-28 14:10:44.886604"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 11], ["customer_id", 9], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 9], ["sushi_id", 11], ["rating", 2], ["created_at", "2020-05-28 14:10:44.900145"], ["updated_at", "2020-05-28 14:10:44.900145"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 22], ["customer_id", 8], ["LIMIT", 1]]
+  [1m[36mReview Create (1.5ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 8], ["sushi_id", 22], ["rating", 1], ["created_at", "2020-05-28 14:10:44.913917"], ["updated_at", "2020-05-28 14:10:44.913917"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 19], ["customer_id", 10], ["LIMIT", 1]]
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 10], ["sushi_id", 19], ["rating", 3], ["created_at", "2020-05-28 14:10:44.929890"], ["updated_at", "2020-05-28 14:10:44.929890"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 16], ["customer_id", 8], ["LIMIT", 1]]
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 8], ["sushi_id", 16], ["rating", 1], ["created_at", "2020-05-28 14:10:44.944283"], ["updated_at", "2020-05-28 14:10:44.944283"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 23], ["customer_id", 9], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 9], ["sushi_id", 23], ["rating", 3], ["created_at", "2020-05-28 14:10:44.958738"], ["updated_at", "2020-05-28 14:10:44.958738"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 11], ["customer_id", 8], ["LIMIT", 1]]
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 8], ["sushi_id", 11], ["rating", 4], ["created_at", "2020-05-28 14:10:44.976131"], ["updated_at", "2020-05-28 14:10:44.976131"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 25], ["customer_id", 9], ["LIMIT", 1]]
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 9], ["sushi_id", 25], ["rating", 5], ["created_at", "2020-05-28 14:10:45.006635"], ["updated_at", "2020-05-28 14:10:45.006635"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 20], ["customer_id", 11], ["LIMIT", 1]]
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 11], ["sushi_id", 20], ["rating", 3], ["created_at", "2020-05-28 14:10:45.022450"], ["updated_at", "2020-05-28 14:10:45.022450"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mReview Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "reviews" WHERE "reviews"."sushi_id" = ? AND "reviews"."customer_id" = ? LIMIT ?[0m  [["sushi_id", 9], ["customer_id", 9], ["LIMIT", 1]]
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("customer_id", "sushi_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 9], ["sushi_id", 9], ["rating", 5], ["created_at", "2020-05-28 14:10:45.067087"], ["updated_at", "2020-05-28 14:10:45.067087"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-05-28 10:11:18 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 107)
+Completed 200 OK in 564ms (Views: 539.2ms | ActiveRecord: 0.0ms | Allocations: 20647)
+
+
+Started GET "/" for ::1 at 2020-05-28 10:11:22 -0400
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 161ms (Views: 159.9ms | ActiveRecord: 0.0ms | Allocations: 8257)
+
+
+Started GET "/sushis" for ::1 at 2020-05-28 10:11:31 -0400
+Processing by SushisController#index as HTML
+  Rendering sushis/index.html.erb within layouts/application
+  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
+  ↳ app/views/sushis/index.html.erb:6
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 6]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 7]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mOcean Load (3.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 8]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 9]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (4.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 9]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 9]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 10]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 11]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 11]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 11]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 12]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 13]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 14]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (21.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 15]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 16]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 16]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 16]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 17]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 18]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 19]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 19]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 19]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 20]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 20]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 20]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 21]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 22]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 22]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 22]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 23]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 23]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 23]]
+  ↳ app/models/sushi.rb:8:in `average'
+  [1m[36mCACHE Ocean Load (0.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 24]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mCACHE Ocean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/sushis/index.html.erb:8
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 25]]
+  ↳ app/views/sushis/index.html.erb:9
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 25]]
+  ↳ app/models/sushi.rb:8:in `map'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 25]]
+  ↳ app/models/sushi.rb:8:in `average'
+  Rendered sushis/index.html.erb within layouts/application (Duration: 855.1ms | Allocations: 60138)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 1.1ms | Allocations: 14546)
+Completed 200 OK in 936ms (Views: 840.5ms | ActiveRecord: 58.0ms | Allocations: 71607)
 
 
-Started GET "/reviews" for ::1 at 2020-05-27 19:04:04 -0400
-Processing by ReviewsController#index as HTML
-  Rendering reviews/index.html.erb within layouts/application
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
-  ↳ app/views/reviews/index.html.erb:7
-  [1m[36mSushi Load (0.5ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mSushi Load (0.6ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/reviews/index.html.erb:8
-  Rendered reviews/index.html.erb within layouts/application (Duration: 84.1ms | Allocations: 28749)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 6)
-Completed 200 OK in 105ms (Views: 98.1ms | ActiveRecord: 3.7ms | Allocations: 38113)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 19:04:07 -0400
+Started GET "/oceans" for ::1 at 2020-05-28 10:12:15 -0400
 Processing by OceansController#index as HTML
   Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.7ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  [1m[36mOcean Load (0.6ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
   ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3699)
+  Rendered oceans/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1106)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 2.3ms | Allocations: 13078)
+Completed 200 OK in 50ms (Views: 38.6ms | ActiveRecord: 0.6ms | Allocations: 9902)
 
 
-Started GET "/oceans/2" for ::1 at 2020-05-27 19:04:09 -0400
+Started GET "/oceans/8" for ::1 at 2020-05-28 10:12:17 -0400
 Processing by OceansController#show as HTML
-  Parameters: {"authenticity_token"=>"5dyBxkU6zelbb/QgDB/iGmkmZrC4Hb23d2iEDzLJ+QjVusgRC/zRc1REVbVKuDu3IpLkt1p5q80n06HvaBSLsg==", "id"=>"2"}
-  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"authenticity_token"=>"aHZBHFtnzHZyIRMmf+D9T2Z+Jqcnul8UtDfomeBiLKoqlv53IZ4dfJosQU94BBuvUbRXGMDREpU7zKre3ouhOw==", "id"=>"8"}
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
   ↳ app/controllers/oceans_controller.rb:23:in `show'
   Rendering oceans/show.html.erb within layouts/application
-  [1m[36mSushi Load (0.5ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 2]]
+  [1m[36mSushi Load (0.3ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 8]]
   ↳ app/views/oceans/show.html.erb:7
-  Rendered oceans/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2947)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.7ms | Allocations: 11763)
-
-
-Started GET "/sushis/3" for ::1 at 2020-05-27 19:04:10 -0400
-Processing by SushisController#show as HTML
-  Parameters: {"authenticity_token"=>"yTCg1whRcE8Yd3XG2Yuk6NA8tNv1vRciMokaiI7qoav5VukARpds1Rdc1FOfLH1Fm4g23BfZAVhiMj9o1DfTEQ==", "id"=>"3"}
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/controllers/sushis_controller.rb:24:in `show'
-  Rendering sushis/show.html.erb within layouts/application
-  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/sushis/show.html.erb:7
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/views/sushis/show.html.erb:8
-  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `map'
-  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."sushi_id" = ?[0m  [["sushi_id", 3]]
-  ↳ app/models/sushi.rb:8:in `average'
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/sushis/show.html.erb:15
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/sushis/show.html.erb:15
-  Rendered sushis/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 5742)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 1.2ms | Allocations: 14973)
-
-
-Started GET "/oceans/2" for ::1 at 2020-05-27 19:04:11 -0400
-Processing by OceansController#show as HTML
-  Parameters: {"authenticity_token"=>"OhuMGkWmk1MVPssN3+ZK0ZFYskRkjIY1J2K+Jjm9PjAKfcXNC2CPyRoVapiZQZN82uwwQ4bokE932ZvGY2BMig==", "id"=>"2"}
-  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/controllers/oceans_controller.rb:23:in `show'
-  Rendering oceans/show.html.erb within layouts/application
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 2]]
-  ↳ app/views/oceans/show.html.erb:7
-  Rendered oceans/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 803)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms | Allocations: 9462)
-
-
-Started GET "/oceans/2" for ::1 at 2020-05-27 19:04:12 -0400
-Processing by OceansController#show as HTML
-  Parameters: {"id"=>"2"}
-  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/controllers/oceans_controller.rb:23:in `show'
-  Rendering oceans/show.html.erb within layouts/application
-  [1m[36mSushi Load (0.7ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 2]]
-  ↳ app/views/oceans/show.html.erb:7
-  Rendered oceans/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 798)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 0.9ms | Allocations: 9450)
-
-
-Started GET "/oceans/2" for ::1 at 2020-05-27 19:04:12 -0400
-Processing by OceansController#show as HTML
-  Parameters: {"id"=>"2"}
-  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/controllers/oceans_controller.rb:23:in `show'
-  Rendering oceans/show.html.erb within layouts/application
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 2]]
-  ↳ app/views/oceans/show.html.erb:7
-  Rendered oceans/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 798)
+  Rendered oceans/show.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1959)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 9445)
+Completed 200 OK in 87ms (Views: 67.6ms | ActiveRecord: 0.6ms | Allocations: 10902)
 
 
-Started GET "/oceans/2" for ::1 at 2020-05-27 19:04:13 -0400
-Processing by OceansController#show as HTML
-  Parameters: {"id"=>"2"}
-  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/controllers/oceans_controller.rb:23:in `show'
-  Rendering oceans/show.html.erb within layouts/application
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 2]]
-  ↳ app/views/oceans/show.html.erb:7
-  Rendered oceans/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 798)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.3ms | Allocations: 9447)
-
-
-Started GET "/customers" for ::1 at 2020-05-27 19:04:15 -0400
-Processing by CustomersController#index as HTML
-  Rendering customers/index.html.erb within layouts/application
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/customers/index.html.erb:9
-  Rendered customers/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1036)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 43ms (Views: 17.7ms | ActiveRecord: 0.1ms | Allocations: 9738)
-
-
-Started GET "/customers/new" for ::1 at 2020-05-27 19:04:16 -0400
-Processing by CustomersController#new as HTML
-  Rendering customers/new.html.erb within layouts/application
-  Rendered customers/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 839)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 9101)
-
-
-Started POST "/customers" for ::1 at 2020-05-27 19:04:18 -0400
-Processing by CustomersController#create as HTML
-  Parameters: {"authenticity_token"=>"Fz2g94OYr83DdGCl+XSUHkUwphIjoyBHoQR14dXi6dSYkQqxa3BHSG1+0Kp1Bbk5ChdVn7IwPXcDSpoZHOAeBQ==", "customer"=>{"name"=>""}, "commit"=>"Create Customer"}
-Redirected to http://localhost:3000/customers/new
-Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 2005)
-
-
-Started GET "/customers/new" for ::1 at 2020-05-27 19:04:18 -0400
-Processing by CustomersController#new as HTML
-  Rendering customers/new.html.erb within layouts/application
-  Rendered customers/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 420)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 8553)
-
-
-Started GET "/oceans" for ::1 at 2020-05-27 19:04:20 -0400
+Started GET "/oceans" for ::1 at 2020-05-28 10:12:48 -0400
 Processing by OceansController#index as HTML
   Rendering oceans/index.html.erb within layouts/application
   [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
   ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 930)
+  Rendered oceans/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.2ms | Allocations: 9209)
+
+
+Started GET "/oceans/8" for ::1 at 2020-05-28 10:13:06 -0400
+Processing by OceansController#show as HTML
+  Parameters: {"authenticity_token"=>"s4rogbQDlsmj5QFNY6a3QwmrNZ/rRgSRzbXpXLDFXbvxalfqzvpHw0voUyRkQlGjPmFEIAwtSRBCTqsbjizQKg==", "id"=>"8"}
+  [1m[36mOcean Load (1.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:23:in `show'
+  Rendering oceans/show.html.erb within layouts/application
+  [1m[36mSushi Load (0.4ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."ocean_id" = ?[0m  [["ocean_id", 8]]
+  ↳ app/views/oceans/show.html.erb:7
+  Rendered oceans/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1024)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 9057)
+Completed 200 OK in 121ms (Views: 110.4ms | ActiveRecord: 1.7ms | Allocations: 9833)
 
 
-Started GET "/oceans" for ::1 at 2020-05-27 19:04:23 -0400
+Started GET "/oceans" for ::1 at 2020-05-28 10:16:09 -0400
 Processing by OceansController#index as HTML
   Rendering oceans/index.html.erb within layouts/application
-  [1m[36mOcean Load (0.1ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
-  ↳ app/views/oceans/index.html.erb:6
-  Rendered oceans/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 923)
+  [1m[36mOcean Load (0.8ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:7
+  Rendered oceans/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1121)
 [Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 9044)
-
-
-Started GET "/" for ::1 at 2020-05-27 19:04:25 -0400
-Processing by HomesController#index as HTML
-  Rendering homes/index.html.erb within layouts/application
-  Rendered homes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 8116)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 19:07:37 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4693)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 105)
-Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.4ms | Allocations: 14007)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 19:07:44 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4383)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.5ms | Allocations: 12511)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 19:07:57 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4374)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.5ms | Allocations: 12497)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 19:08:07 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4694)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 100)
-Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.4ms | Allocations: 14006)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-27 19:08:31 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4694)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 100)
-Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.5ms | Allocations: 13996)
-
-
-Started GET "/" for ::1 at 2020-05-28 10:07:17 -0400
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by HomesController#index as HTML
-  Rendering homes/index.html.erb within layouts/application
-  Rendered homes/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 299)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 106)
-Completed 200 OK in 87ms (Views: 75.8ms | ActiveRecord: 0.0ms | Allocations: 22019)
-
-
-Started GET "/orders" for ::1 at 2020-05-28 10:07:20 -0400
-Processing by OrdersController#index as HTML
-  Rendering orders/index.html.erb within layouts/application
-  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
-  ↳ app/views/orders/index.html.erb:8
-  [1m[36mSushi Load (0.5ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.1ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis" WHERE "sushis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:10
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/orders/index.html.erb:11
-  Rendered orders/index.html.erb within layouts/application (Duration: 110.8ms | Allocations: 37493)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
-Completed 200 OK in 130ms (Views: 118.4ms | ActiveRecord: 5.7ms | Allocations: 47184)
-
-
-Started GET "/orders/new" for ::1 at 2020-05-28 10:07:22 -0400
-Processing by OrdersController#new as HTML
-  Rendering orders/new.html.erb within layouts/application
-  [1m[36mSushi Load (0.2ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:9
-  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:39
-  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
-  ↳ app/views/orders/new.html.erb:46
-  [1m[36mCACHE Sushi Load (0.0ms)[0m  [1m[34mSELECT "sushis".* FROM "sushis"[0m
-  ↳ app/views/orders/new.html.erb:49
-  Rendered orders/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 6262)
-[Webpacker] Everything's up-to-date. Nothing to do
-  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
-Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.9ms | Allocations: 14515)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 101)
+Completed 200 OK in 108ms (Views: 101.7ms | ActiveRecord: 0.8ms | Allocations: 10566)
 
 
