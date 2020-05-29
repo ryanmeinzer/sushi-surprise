@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
     end
 
     def new
+        cookies[:order_counter] = cookies[:order_counter].to_i + 1
         @order = Order.new
     end
 

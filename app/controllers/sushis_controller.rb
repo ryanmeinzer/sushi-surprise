@@ -21,10 +21,15 @@ class SushisController < ApplicationController
     end
 
     def show
+        cookies[:sushi_counter] = cookies[:sushi_counter].to_i + 1
         @sushi = Sushi.find(params[:id])
     end
 
     def destroy
+
+    end
+
+    def reset
 
     end
     

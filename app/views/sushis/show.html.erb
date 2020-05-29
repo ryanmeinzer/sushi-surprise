@@ -1,17 +1,26 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
+<% if cookies[:sushi_counter].to_i > 5 %>
+Watch an ad! <br>
+<img src="https://teamjimmyjoe.com/wp-content/uploads/2019/09/funny-memes-america-one-picture-ronald-mcdonald.jpg" width="300"><br>
+<%= button_to "Bring me back to sushis!!!", reset_path, method: :delete %>
+<% else %>
 
-<h1>Sushi</h1>
 
-Presenting the <%= @sushi.name %> sushi from the
-<%= link_to @sushi.ocean.name, ocean_path(@sushi.ocean.id), method: :get %>
-<% if @sushi.reviews.count > 0 %>
-, with an average review of <%= @sushi.average %> stars.
-<% end %><br>
-<img src=<%= @sushi.img_url %> width="300"><br>
+    <h1>Sushi</h1>
 
-<h3>All Reviews</h3>
-<% @sushi.reviews.each do |review| %>
-<%= review.rating %> stars by <%= link_to review.customer.name, customer_path(review.customer.id), method: :get %>
-(Review # <%= link_to review.id, review_path(review.id), method: :get %>)<br>
+    Presenting the <%= @sushi.name %> sushi from the
+    <%= link_to @sushi.ocean.name, ocean_path(@sushi.ocean.id), method: :get %>
+    <% if @sushi.reviews.count > 0 %>
+    , with an average review of <%= @sushi.average %> stars.
+    <% end %><br>
+    <img src=<%= @sushi.img_url %> width="300"><br>
+
+    <h3>All Reviews</h3>
+    <% @sushi.reviews.each do |review| %>
+    <%= review.rating %> stars by <%= link_to review.customer.name, customer_path(review.customer.id), method: :get %>
+    (Review # <%= link_to review.id, review_path(review.id), method: :get %>)<br>
+    <% end %>
+
+
 <% end %>
