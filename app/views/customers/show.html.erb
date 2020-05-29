@@ -16,7 +16,7 @@ Order #<%= link_to order.id, order_path(order), method: :get %><br>
 <% @customer.sushis.uniq.each do |sushi| %>
 <%= @customer.name %> has ordered <%= link_to sushi.name, sushi_path(sushi), method: :get %> <%= @customer.orders.select { |order| order.sushi.name == sushi.name }.count %> time(s).<br>
 <% end %>
-<h3><%= @customer.name %> has reviewed the following sushis:<br></h3>
+<h3><%= @customer.name %> has reviewed the following sushi(s):<br></h3>
 <% @customer.reviews.each do |review| %>
     <%= link_to review.sushi.name, sushi_path(review.sushi.id), method: :get %> | <%= review.rating %> stars<br>
 <% end %>

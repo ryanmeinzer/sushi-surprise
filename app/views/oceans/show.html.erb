@@ -1,10 +1,10 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
+<div class="container text-center">
+<br><h1>Ocean🌊</h1><br>
 
-<h1>Ocean</h1>
-
-<%= @ocean.name %>, which has the following sushi(s):<br><br>
+<p><p class="font-weight-bold"><%= @ocean.name %></p> has the following sushi(s):<br><br>
 <% @ocean.sushis.each do |sushi| %>
 <%= link_to sushi.name, sushi_path(sushi), method: :get %><br>
-<img src=<%= sushi.img_url %> width="300"><br>
+<img src=<%= sushi.img_url %> width="300"><p><br>
 <% end %>
