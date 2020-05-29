@@ -1,18 +1,21 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
-
-<h1>New Customer</h1>
+<div class="container text-center">
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><h1>New Customer👤</h1>
 
 <% if flash[:errors] %>
 <%= flash[:errors] %>
 <% end %><br>
-<br>
+
 
 <%= form_for @customer do |f| %>
     
     <%= f.label :name, 'Full Name' %>
-    <%= f.text_field :name %>
+    <br><%= f.text_field :name %><br>
 
-    <%= f.submit %>
+   <br><%= f.submit "create", class:"btn btn-dark btn-sm" %>
 
 <% end %>
+
+</div>

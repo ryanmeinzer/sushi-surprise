@@ -1,9 +1,16 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
-<% if cookies[:sushi_counter].to_i > 5 %>
-Watch an ad! <br>
-<img src="https://teamjimmyjoe.com/wp-content/uploads/2019/09/funny-memes-america-one-picture-ronald-mcdonald.jpg" width="300"><br>
-<%= button_to "Bring me back to sushis!!!", reset_path, method: :delete %>
+<% if cookies[:sushi_counter].to_i > 3 %>
+<div class="container text-center">
+<br><h2>Watch an ad!</h2>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dysfQYhMLUQ" allowfullscreen></iframe>
+</div>
+<%# <iframe width=“764” height="573" src=“https://youtu.be/dysfQYhMLUQ” frameborder="0" allow=“accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture” allowfullscreen></iframe><br> %>
+<%# <iframe width="420" height="315" src="https://youtu.be/dysfQYhMLUQ"></iframe><br> %>
+<br> <%= button_to "Bring me back to sushis!!!", reset_path, method: :delete, class:"btn btn-dark btn-lg" %>
+</div>
 <% else %>
 
     <div class="container text-center">

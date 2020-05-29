@@ -1,13 +1,15 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
+<div class="container text-center">
 
-<a href="/orders/new">New Order</a>
+    <br><a href="/orders/new" class="btn btn-dark btn-sm" role="button">New Order</a><br>
 
-<h1>Orders</h1>
+    <br><h1>Orders📝</h1><br>
 
-Order #<%= @order.id %> by <%= link_to @order.customer.name, customer_path(@order.customer.id), method: :get %> of
-<%= link_to @order.sushi.name, sushi_path(@order.sushi.id), method: :get %><br>
+    <p class="font-italic">Order #<%= @order.id %> by <%= link_to @order.customer.name, customer_path(@order.customer.id), method: :get %> of
+    <%= link_to @order.sushi.name, sushi_path(@order.sushi.id), method: :get %><br>
 
-<%= button_to "Return/Cancel Order", order_path(@order.id), method: :delete %><br>
+    <%= button_to "Return/Cancel Order", order_path(@order.id), method: :delete, class:"btn btn-dark btn-sm" %><br>
 
-<%= button_to "Review #{@order.sushi.name}", new_review_path, method: :get %><br>
+    <%= button_to "Review #{@order.sushi.name}", new_review_path, method: :get,  class:"btn btn-dark btn-sm" %><br>
+</div>

@@ -1,7 +1,7 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
-
-<h1>Edit Review</h1>
+<div class="container text-center">
+<br><h1>Edit Review💬</h1><br><br>
 
 <%= form_for @review do |f| %>
 
@@ -16,6 +16,7 @@
 <%= f.label :rating, 'Review:' %>
 <%= f.select :rating, ['1', '2', '3', '4', '5'] %> Stars
 
-<%= f.submit %>
+<br><%= f.submit "update", class:"btn btn-dark btn-lg"%>
 
 <% end %>
+</div>

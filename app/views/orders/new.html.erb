@@ -1,17 +1,21 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
-<% if cookies[:order_counter] > 3 %>
-    Watch an ad! <br>
-    <img src="https://teamjimmyjoe.com/wp-content/uploads/2019/09/funny-memes-america-one-picture-ronald-mcdonald.jpg" width="300"><br>
 
-    <%= button_to "More orders!!!", reset_path, method: :delete %>
+<% if cookies[:order_counter] > 3 %>
+    <div class="container text-center">
+    <br><h2>Watch an ad!</h2>
+    <iframe width="380" height="512ç" src="https://lh3.googleusercontent.com/proxy/7EVe5cuSVSHC4D7NSljECndTQdNReZcpuegm_ysejCYl8i-hF8JePcdZ3_7Gf0ZyNQbz7_qL_Bdm98r6va_VMrBxC_T54qPz8Z5KxsE49UA2xWazo-U"></iframe><br>
+
+    <br> <%= button_to "More orders!!!", reset_path, method: :delete, class:"btn btn-dark btn-lg" %>
+    </div>
 <% else %>
 
 
+<div class="container text-center">
+    <br><h1>New Order📝</h1>
 
-    <h1>New Order</h1>
-
-    <h3>Here's your surprise sushi:</h3>
+    <h3>Here's your surprise sushi:</h3><br>
+</div>
 
     <marquee scrollamount="15" direction="left">
         <% surprise = Sushi.all.sample %>
@@ -41,13 +45,12 @@
         == = == = == = == = == = == = == = == = == = == = == = == = == = ==
     </marquee>
     <br>
+   <div class="container text-center">
+    <br><p>Would you like to order this surprise?</p>
 
-    <p>Would you like to order this surprise?</p>
-
-    <%= button_to "Yes", orders_path(:order => {customer_id: Customer.last.id, sushi_id: surprise.id}), method: :post %><br>
+    <%= button_to "Yes", orders_path(:order => {customer_id: Customer.last.id, sushi_id: surprise.id}), method: :post, class:"btn btn-dark btn-lg" %><br>
 
     <h3>If not, just place your new order below:</h3><br>
-
     <%= form_for @order do |f| %>
 
     <%= f.label :customer_id, 'Customer' %>
@@ -56,8 +59,9 @@
     <%= f.label :sushi_id, 'Sushi' %>
     <%= f.collection_select :sushi_id, Sushi.all, :id, :name %>
 
-    <%= f.submit %>
+    <br><br><%= f.submit "create", class:"btn btn-dark btn-lg" %>
 
     <% end %>
+ </div>   
 
 <% end %>
