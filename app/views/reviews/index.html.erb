@@ -1,9 +1,14 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
 
-<a href="/reviews/new">New Review</a>
+<%# <a href="/reviews/new">New Review</a> %>
+<div class="container text-center"> 
 
-<h1>Reviews</h1>
+<br><h1>Reviews💬</h1><br>
 
 <% @reviews.each do |review| %>
-Review #<%= link_to review.id, review_path(review), method: :get %> of <%= link_to review.sushi.name, sushi_path(review.sushi.id), method: :get %> from <%= link_to review.customer.name, customer_path(review.customer.id), method: :get  %><br>
+<p>Review #<%= link_to review.id, review_path(review), method: :get %> of <%= link_to review.sushi.name, sushi_path(review.sushi.id), method: :get %> from <%= link_to review.customer.name, customer_path(review.customer.id), method: :get  %></p>
 <% end %>
+
+<br><a href="/reviews/new" class="btn btn-dark btn-sm" role="button">New Review</a><br>
+
+</div>

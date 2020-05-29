@@ -1,12 +1,15 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
+<div class="container text-center">  
 
-<a href="/orders/new">New Order</a>
-
-<h1>Orders</h1>
+<br><h1>Orders📝</h1><br>
 
 <% @orders.each do |order| %>
-Order #<%= link_to order.id, order_path(order), method: :get %> of
+<p>Order #<%= link_to order.id, order_path(order), method: :get %> of
 <%= link_to order.sushi.name, sushi_path(order.sushi.id), method: :get  %> from
-<%= link_to order.customer.name, customer_path(order.customer.id), method: :get  %><br>
+<%= link_to order.customer.name, customer_path(order.customer.id), method: :get  %></p>
 <% end %>
+
+<br><a href="/orders/new" class="btn btn-dark btn-sm" role="button">New Order</a><br>
+
+</div>

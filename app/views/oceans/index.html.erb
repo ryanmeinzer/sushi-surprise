@@ -1,10 +1,12 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a> %>
+<div class="container text-center"> 
 
-<h1>Oceans</h1>
+ <br><h1>Oceans🌊</h1><br>
 
 
-<% @oceans.each do |ocean| %>
-<%= link_to ocean.name, ocean_path(ocean), method: :get %><br>
-<img src=<%= ocean.img_url %> width="300"><br><br>
-<% end %>
+ <% @oceans.each do |ocean| %>
+  <p><%= link_to ocean.name, ocean_path(ocean), method: :get %><br>
+ <img src=<%= ocean.img_url %> width="300"><br><br></p>
+ <% end %>
+</div>

@@ -11,7 +11,7 @@ class CustomersController < ApplicationController
         @customer = Customer.create(customer_params)
         if @customer.valid?
             flash[:success] = "Customer Created"
-            redirect_to customer_path(@customer)
+            redirect_to new_order_path
         else
             flash[:errors] = @customer.errors.full_messages
             redirect_to new_customer_path

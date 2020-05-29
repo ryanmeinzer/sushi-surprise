@@ -1,7 +1,7 @@
 <%# <a href="/customers">Customers</a> | <a href="/orders">Orders</a> | <a href="/reviews">Reviews</a> | <a
     href="/sushis">Sushis</a> | <a href="/oceans">Oceans</a><br><br> %>
-
-<h1>Sushi</h1>
+<div class="container text-center">
+<br><h1>Sushi🥢</h1><br>
 
 Presenting the <%= @sushi.name %> sushi from the
 <%= link_to @sushi.ocean.name, ocean_path(@sushi.ocean.id), method: :get %>
@@ -10,8 +10,9 @@ Presenting the <%= @sushi.name %> sushi from the
 <% end %><br>
 <img src=<%= @sushi.img_url %> width="300"><br>
 
-<h3>All Reviews</h3>
+<br><h3>All Reviews💬</h3><br>
 <% @sushi.reviews.each do |review| %>
-<%= review.rating %> stars by <%= link_to review.customer.name, customer_path(review.customer.id), method: :get %>
-(Review # <%= link_to review.id, review_path(review.id), method: :get %>)<br>
+<p><%= review.rating %> stars by <%= link_to review.customer.name, customer_path(review.customer.id), method: :get %>
+(Review # <%= link_to review.id, review_path(review.id), method: :get %>)</p><br>
 <% end %>
+</div>
